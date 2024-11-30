@@ -1,0 +1,12 @@
+api:
+  log:
+    tracing: false
+    zap:
+      level: "info"
+      encoding: "json"
+      outputPaths: ["stdout", "/tmp/logs"]
+      errorOutputPaths: ["stderr"]
+      encoderConfig:
+        messageKey: "message"
+        levelKey: "level"
+        levelEncoder: "lowercase"
