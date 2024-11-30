@@ -7,12 +7,12 @@
 package di
 
 import (
-	"github.com/firstics/pos-be/pkg/api"
-	"github.com/firstics/pos-be/pkg/api/handler"
-	"github.com/firstics/pos-be/pkg/api/middleware"
-	"github.com/firstics/pos-be/pkg/config"
-	"github.com/firstics/pos-be/pkg/driver"
-	"github.com/firstics/pos-be/pkg/usecase"
+	"github.com/pos-be/pkg/api"
+	"github.com/pos-be/pkg/api/handler"
+	"github.com/pos-be/pkg/api/middleware"
+	"github.com/pos-be/pkg/config"
+	"github.com/pos-be/pkg/driver"
+	"github.com/pos-be/pkg/usecase"
 )
 
 // Injectors from wire.go:

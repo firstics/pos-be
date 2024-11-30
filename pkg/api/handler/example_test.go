@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	mocks "github.com/firstics/pos-be/mocks/usecase"
-	"github.com/firstics/pos-be/pkg/api/handler"
+	mocks "github.com/pos-be/mocks/usecase"
+	"github.com/pos-be/pkg/api/handler"
 )
 
 type exampleHandlerDependencies struct {

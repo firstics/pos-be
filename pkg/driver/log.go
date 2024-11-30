@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/firstics/pos-be/pkg/config"
+	"github.com/pos-be/pkg/config"
 )
 
 type Logger interface {

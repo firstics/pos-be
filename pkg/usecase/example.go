@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/firstics/pos-be/pkg/driver"
+	"github.com/pos-be/pkg/driver"
 )
 
 type ExampleUsecase interface {

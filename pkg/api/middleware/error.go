@@ -5,9 +5,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/firstics/pos-be/pkg/api/handler"
-	"github.com/firstics/pos-be/pkg/driver"
-	"github.com/firstics/pos-be/pkg/usecase"
+	"github.com/pos-be/pkg/api/handler"
+	"github.com/pos-be/pkg/driver"
+	"github.com/pos-be/pkg/usecase"
 )
 
 type ErrorHandler struct {

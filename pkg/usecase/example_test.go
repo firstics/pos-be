@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	mocks "github.com/firstics/pos-be/mocks/driver"
-	"github.com/firstics/pos-be/pkg/usecase"
+	mocks "github.com/pos-be/mocks/driver"
+	"github.com/pos-be/pkg/usecase"
 )
 
 type exampleDependencies struct {

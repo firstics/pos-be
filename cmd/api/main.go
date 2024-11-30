@@ -5,8 +5,8 @@ import (
 
 	_ "go.uber.org/automaxprocs"
 
-	config "github.com/dataxai/inno-go-project-layout/pkg/config"
-	di "github.com/dataxai/inno-go-project-layout/pkg/di"
+	config "github.com/pos-be/pkg/config"
+	di "github.com/pos-be/pkg/di"
 )
 
 func main() {

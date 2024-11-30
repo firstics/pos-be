@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/firstics/pos-be/pkg/usecase"
+	"github.com/pos-be/pkg/usecase"
 )
 
 type ExampleRequester struct {

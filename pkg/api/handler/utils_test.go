@@ -7,8 +7,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/firstics/pos-be/pkg/api/middleware"
-	"github.com/firstics/pos-be/pkg/driver"
+	"github.com/pos-be/pkg/api/middleware"
+	"github.com/pos-be/pkg/driver"
 )
 
 func request(method, path string, body io.Reader, handler gin.HandlerFunc) (*httptest.ResponseRecorder, error) {

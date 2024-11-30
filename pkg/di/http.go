@@ -3,8 +3,8 @@ package di
 import (
 	"github.com/google/wire"
 
-	"github.com/firstics/pos-be/pkg/api"
-	"github.com/firstics/pos-be/pkg/api/middleware"
+	"github.com/pos-be/pkg/api"
+	"github.com/pos-be/pkg/api/middleware"
 )
 
 var HttpSet = wire.NewSet(

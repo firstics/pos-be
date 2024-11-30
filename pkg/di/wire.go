@@ -6,8 +6,8 @@ package di
 import (
 	"github.com/google/wire"
 
-	"github.com/firstics/pos-be/pkg/api"
-	"github.com/firstics/pos-be/pkg/config"
+	"github.com/pos-be/pkg/api"
+	"github.com/pos-be/pkg/config"
 )
 
 func InitializeApp(config config.Config) (*api.ServerHTTP, error) {

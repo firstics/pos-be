@@ -7,6 +7,9 @@ DOCKERCMD=docker
 BUILD_DIR=build
 BINARY_DIR=$(BUILD_DIR)/bin
 CODE_COVERAGE=code-coverage
+CONTAINER_REGISTRY_IMAGE_NAME=pos-be
+CONTAINER_REGISTRY_NAME=dev
+CONTAINER_REGISTRY_HOST=registry.gitlab.com/pos-be
 
 all: test build
 
@@ -35,6 +38,18 @@ deps: ## Install dependencies
 
 deps-cleancache: ## Clear cache in Go module
 	$(GOCMD) clean -modcache
+
+docker-build: ## Build docker image with default setting and platform
+	$(DOCKERCMD) build -t $(CONTAINER_REGISTRY_NAME).$(CONTAINER_REGISTRY_HOST)/$(CONTAINER_REGISTRY_IMAGE_NAME):$(tag) .
+
+docker-build-amd: ## Build docker image with default setting and platform as amd64
+	$(DOCKERCMD) buildx build --platform=linux/amd64 -t $(CONTAINER_REGISTRY_NAME).$(CONTAINER_REGISTRY_HOST)/$(CONTAINER_REGISTRY_IMAGE_NAME):$(tag) .
+
+docker-run: ## Run docker image locally
+	$(DOCKERCMD) run -it -v ./config.yml:/app/config.yml -p 8081:8081  $(CONTAINER_REGISTRY_NAME).$(CONTAINER_REGISTRY_HOST)/$(CONTAINER_REGISTRY_IMAGE_NAME):$(tag)
+
+docker-push: ## Push the image to Container Registry (EX. tag=0.0.1)
+	$(DOCKERCMD) push $(CONTAINER_REGISTRY_NAME).$(CONTAINER_REGISTRY_HOST)/$(CONTAINER_REGISTRY_IMAGE_NAME):$(tag)
 
 wire: ## Generate wire_gen.go
 	cd pkg/di && wire
